@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.mars.overview.OverviewViewModel" />
+
+        <variable
+            name="property"
+            type="com.example.mars.network.MarsProperty" />
+
+    </data>
+
+    <ImageView
+        android:id="@+id/mars_image"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        app:imageUrl="@{property.imgSrcUrl}"
+
+        tools:src="@tools:sample/backgrounds/scenic" />
+</layout>
